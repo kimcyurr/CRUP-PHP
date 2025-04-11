@@ -6,6 +6,13 @@
     <title>Activity</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        .container
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
         form{
             display: grid;
             flex-direction: column;
@@ -18,7 +25,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            
+            align-items: center;
         }
         .card
         {
@@ -29,6 +36,7 @@
             place-content: center;
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
+            height: 250px;
         }
         h1{
             text-align: center;
@@ -40,16 +48,27 @@
         }
         button{
             margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+          
+            
         }
         input{
             border-radius: 6px;
-            border: none;
+            border: 1px #f6f6f6;
             height: 20px;
+            outline: none;
+            background: transparent;
+            color: white;
+        }
+        input:focus{
+            border: 2px solid #f6f6f6;
         }
         
     </style>
 </head>
 <body>
+    <div class="container">
     <form action="login.php" method="get"> 
         <div class="card">
             <h1>Login</h1>
@@ -63,6 +82,7 @@
             <button>Login</button><br>
         </div>
     </form>
+    </div>
 </body>
 </html>
 
